@@ -19,9 +19,9 @@ jobs:
     - name: AWS 자격 증명 설정
       uses: aws-actions/configure-aws-credentials@v4
       with:
-        aws-access-key-id: ${{AWS_ACCESS_KEY}}
-        aws-secret-access-key-id: ${{AWS_SECRETS_ACCESS_KEY}}
-        aws-region: ${{AWS_REGION}}
+        aws-access-key-id: ${{secret.AWS_ACCESS_KEY}}
+        aws-secret-access-key-id: ${{secret.AWS_SECRETS_ACCESS_KEY}}
+        aws-region: ${{secret.AWS_REGION}}
 
     - name: S3 정적웹사이트로 배포
       run: |
