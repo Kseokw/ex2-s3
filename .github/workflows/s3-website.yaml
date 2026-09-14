@@ -25,7 +25,7 @@ jobs:
 
     - name: S3 정적웹사이트로 배포
       run: |
-       aws s3 sync html/ s3://std07-git-web-s3/ --delete --acl public-read
+       aws s3 sync html/ s3://std07-git-web-s3/ --delete
 
 # aws s3 sync html/ s3://std07-git-web-s3/ --delete --acl public-read
 
